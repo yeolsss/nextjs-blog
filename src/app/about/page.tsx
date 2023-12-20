@@ -1,9 +1,9 @@
 import Layout from "@/app/layout/Layout";
 
-export default function Home() {
+export default function About() {
   return (
     <Layout>
-      <div>Home!</div>
+      <div>About</div>
     </Layout>
   );
 }
