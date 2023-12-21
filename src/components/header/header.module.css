@@ -1,11 +1,10 @@
 .headerLi {
-  @apply relative h-[4.8rem] flex items-center;
+  @apply relative flex h-[4.8rem] items-center;
 }
 
 .headerLi::before {
-  @apply absolute bottom-0 h-[0.5rem] w-[0] rounded-[1rem] transition-all duration-150 ease-in z-10;
-  content: "";
-  background-color: black;
+  @apply bg-primaryColor absolute bottom-0 z-10 h-[0.5rem] w-[0] rounded-[1rem] transition-all duration-150 ease-in;
+  content: '';
 }
 
 .headerLi:hover::before {

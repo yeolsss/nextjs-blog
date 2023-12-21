@@ -1,9 +1,9 @@
-import Layout from "@/app/layout/Layout";
+'use client';
 
 export default function Home() {
   return (
-    <Layout>
-      <div>Home!</div>
-    </Layout>
+    <div>
+      <p className={'font-sans'}>Home!</p>
+    </div>
   );
 }

@@ -1,0 +1,3 @@
+.icon {
+  @apply text-textColor h-[6.4rem] w-[6.4rem];
+}
