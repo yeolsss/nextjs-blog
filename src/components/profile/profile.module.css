@@ -10,7 +10,7 @@
 }
 
 .profileDescriptionWrapper {
-  padding: 1rem 2.1rem;
+  @apply mt-[2.4rem];
   width: auto;
   height: auto;
   opacity: 1;

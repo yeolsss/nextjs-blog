@@ -3,21 +3,18 @@
 import { useTheme } from 'next-themes';
 import { CiDark, CiLight } from 'react-icons/ci';
 import styles from './themeButton.module.css';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const ThemeButton = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const handleToggleTheme = () => {
-    if (theme === 'system')
-      systemTheme === 'dark' ? setTheme('light') : setTheme('dark');
 
+  const handleToggleTheme = () => {
     theme === 'dark' ? setTheme('light') : setTheme('dark');
   };
 
   useEffect(() => {
-    systemTheme === 'dark' ? setTheme('light') : setTheme('dark');
-  }, []);
-
+    if (!theme) setTheme(systemTheme || 'light');
+  }, [systemTheme, theme, setTheme]);
   return (
     <div>
       <button onClick={handleToggleTheme}>

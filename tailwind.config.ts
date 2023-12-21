@@ -18,6 +18,15 @@ const config: Config = {
         backgroundColor2: 'var(--backgroundColor2)',
         backgroundColor3: 'var(--backgroundColor3)',
       },
+      screens: {
+        'max-sm': { max: '639px' },
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+        '3xl': '1920px',
+      },
       fontFamily: {
         sans: ['IBM Plex Sans', 'IBM Plex Sans KR'], // 여기에 커스텀 글꼴 추가
         d2coding: 'D2Coding',
@@ -25,9 +34,7 @@ const config: Config = {
     },
   },
   variants: {
-    extend: {
-      backgroundColor: ['dark'],
-    },
+    extend: {},
   },
   plugins: [],
 };
