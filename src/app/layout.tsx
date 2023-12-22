@@ -5,6 +5,7 @@ import CustomThemeProvider from '@/providers/CustomThemeProvider';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
 import Profile from '@/components/profile/Profile';
+import Category from '@/components/category/Category';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,6 +23,7 @@ export default function RootLayout({
         <CustomThemeProvider>
           <Header />
           <Profile />
+          <Category />
           {children}
           <Footer />
         </CustomThemeProvider>

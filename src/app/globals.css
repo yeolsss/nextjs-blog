@@ -160,6 +160,7 @@ table {
   --backgroundColor1: #ffffff;
   --backgroundColor2: #ededed;
   --backgroundColor3: #d9d9d9;
+  --postCardBgColor: #cac9c7;
   --ibm-plex-sans-kr: IBM Plex Sans KR, IBM Plex Sans;
 }
 
@@ -171,6 +172,7 @@ table {
   --backgroundColor1: #000000;
   --backgroundColor2: #121212;
   --backgroundColor3: #252525;
+  --postCardBgColor: #272624;
   --ibm-plex-sans-kr: IBM Plex Sans KR, IBM Plex Sans;
 }
 
@@ -181,5 +183,5 @@ html {
 
 body {
   width: 100vw;
-  @apply bg-backgroundColor2 text-textColor font-sans transition-colors duration-200 ease-in;
+  @apply bg-backgroundColor2 font-sans text-textColor transition-colors duration-200 ease-in;
 }

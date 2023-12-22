@@ -17,6 +17,7 @@ const config: Config = {
         backgroundColor1: 'var(--backgroundColor1)',
         backgroundColor2: 'var(--backgroundColor2)',
         backgroundColor3: 'var(--backgroundColor3)',
+        postCardBgColor: 'var(--postCardBgColor)',
       },
       screens: {
         'max-sm': { max: '639px' },
@@ -28,7 +29,7 @@ const config: Config = {
         '3xl': '1920px',
       },
       fontFamily: {
-        sans: ['IBM Plex Sans', 'IBM Plex Sans KR'], // 여기에 커스텀 글꼴 추가
+        sans: ['IBM Plex Sans KR', 'IBM Plex Sans'],
         d2coding: 'D2Coding',
       },
     },

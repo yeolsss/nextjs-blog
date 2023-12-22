@@ -1,4 +1,3 @@
-'use client';
 import styles from './profile.module.css';
 import ProfileImage from '@/components/profile/profileImage/ProfileImage';
 import ThemeButton from '@/components/profile/themeButton/ThemeButton';
@@ -7,9 +6,7 @@ import ProfileInfo from '@/components/profile/profileInfo/ProfileInfo';
 const Profile = () => {
   return (
     <section
-      className={
-        'text-textColor z-2 relative mx-auto mb-[1.6rem] mt-[3.6rem] h-auto w-full max-w-[52rem] rounded-[1.6rem] px-[1.6rem] py-[0.8rem] max-sm:max-w-[31rem] md:max-w-[52rem] lg:max-w-[69rem]'
-      }
+      className={`z-2 relative mx-auto mx-auto mb-[1.6rem] mt-[3.6rem] h-auto w-full max-w-[52rem] rounded-[1.6rem] px-[1.6rem] py-[0.8rem] text-textColor md:max-w-[52rem] lg:max-w-[69rem] max-sm:max-w-[31rem]`}
     >
       {/* 가상 div */}
       <div className={styles.visibleProfileWrapper}></div>
@@ -29,7 +26,7 @@ const Profile = () => {
       <div>
         <div className={styles.profileDescriptionWrapper}>
           <p
-            className={`text-textColor text-[1.6rem] font-normal leading-[2.38rem] ${styles.profileDescriptionText}`}
+            className={`text-[1.6rem] font-normal leading-[2.38rem] text-textColor ${styles.profileDescriptionText}`}
           >
             안녕하세요. 웹 개발 2년차로 활동중인 개발자 입니다. 단순히 책이나
             영상으로 접하는 코딩이 아닌, 실무에서 맞닥드렸던 문제를 해결하며
@@ -40,7 +37,7 @@ const Profile = () => {
 
         <div className={'mt-[1.5rem]'}>
           <span
-            className={`text-textColor mt-[1rem] text-[1.4rem] font-bold ${styles.profileDescriptionText}`}
+            className={`mt-[1rem] text-[1.4rem] font-bold text-textColor ${styles.profileDescriptionText}`}
           >
             HTML/CSS, Javascript, Typescript, Gatsby, Zustand, Redux:toolkit
           </span>

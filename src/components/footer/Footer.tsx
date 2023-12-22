@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className={'my-[2rem]'}>
       <p
         className={
-          'text-textColor w-full text-center text-[1.4rem] font-normal tracking-[0.07px]'
+          'w-full text-center text-[1.4rem] font-normal tracking-[0.07px] text-textColor'
         }
       >
         &copy;2023 권경열. All Rights Reserved.
