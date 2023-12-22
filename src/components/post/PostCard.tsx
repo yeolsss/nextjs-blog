@@ -19,7 +19,7 @@ const PostCard = ({ post }: IProps) => {
 
   return (
     <article className={'mt-[4rem] px-[1.6rem] py-[0.8rem]'}>
-      <Link href={'#'}>
+      <Link href={`/post/${slug}`}>
         <div className={'flex justify-between'}>
           <h2
             className={

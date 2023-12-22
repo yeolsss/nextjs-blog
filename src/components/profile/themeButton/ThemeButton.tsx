@@ -7,13 +7,14 @@ import React, { useEffect } from 'react';
 
 const ThemeButton = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-
   const handleToggleTheme = () => {
     theme === 'dark' ? setTheme('light') : setTheme('dark');
   };
 
   useEffect(() => {
-    if (!theme) setTheme(systemTheme || 'light');
+    if (!theme) {
+      setTheme(systemTheme || 'light');
+    }
   }, [systemTheme, theme, setTheme]);
   return (
     <div>

@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React from 'react';
 import styles from './header.module.css';
-import { usePathname } from 'next/navigation';
+import useSegment from '@/hooks/useSegment';
 
 interface IHeaderLink {
   src: string;
@@ -10,11 +10,11 @@ interface IHeaderLink {
 }
 
 const Header = () => {
-  const pathName = usePathname();
+  const segment = useSegment();
   const headerLink: IHeaderLink[] = [
     { src: '/', name: 'Home' },
     { src: '/work', name: 'Work' },
-    { src: '/post', name: 'Post' },
+    { src: '/posts', name: 'Post' },
   ];
 
   return (
@@ -24,9 +24,11 @@ const Header = () => {
       }
     >
       <div className={'flex h-[100%] justify-center'}>
-        <h1 className={'h-[100%] text-[6.3rem] font-bold tracking-[-0.95px]'}>
-          Yeols.dev
-        </h1>
+        <Link href={'/'}>
+          <h1 className={'h-[100%] text-[6.3rem] font-bold tracking-[-0.95px]'}>
+            Yeols.dev
+          </h1>
+        </Link>
       </div>
       <nav className={'flex flex-row'}>
         <ul className={'g-[2.1rem] flex h-[100%] items-end gap-x-[1.6rem]'}>
@@ -34,7 +36,7 @@ const Header = () => {
             <li
               key={link.name + index}
               className={`${styles.headerLi} ${
-                pathName === link.src ? styles.showBefore : ''
+                segment === link.src ? styles.showBefore : ''
               }`}
             >
               <Link href={link.src} className={styles.headerLi__link}>
