@@ -1,9 +1,18 @@
-'use client';
+import { fetchHomeBlogPosts } from '@/api/contentfulLib';
+import HomeHeader from '@/components/home/HomeHeader/HomeHeader';
+import { containerStyles } from '@/style/styles';
+import PostList from '@/components/home/postList/PostList';
 
-export default function Home() {
+async function Home() {
+  const blogPosts = await fetchHomeBlogPosts();
   return (
-    <div>
-      <p className={'font-sans'}>Home!</p>
-    </div>
+    <main
+      className={`bg-postCardBgColor mx-auto h-auto  rounded-[1.6rem] px-[1.6rem]  py-[2.4rem] ${containerStyles}`}
+    >
+      <HomeHeader />
+      <PostList />
+    </main>
   );
 }
+
+export default Home;

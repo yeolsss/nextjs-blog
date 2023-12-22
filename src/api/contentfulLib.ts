@@ -46,13 +46,24 @@ function parseContentfulBlogWork(blogWorkEntry: TBlogWorkEntry) {
   };
 }
 
-export const fetchBlogPost = cache(async function (searchParams?: {
+// blog search query 적용
+export const fetchBlogPosts = cache(async function (searchParams?: {
   category?: string;
   search?: string;
 }) {
   // filter 처리 할지 조건에 맞는 api 호출 할지 생각
   return await client.getEntries<TypeYeolsBlogSkeleton>({
     content_type: 'yeolsBlog',
-    order: ['fields.createdAt'],
+    order: ['-sys.createdAt'],
   });
+});
+
+export const fetchHomeBlogPosts = cache(async function () {
+  const response = await client.getEntries<TypeYeolsBlogSkeleton>({
+    content_type: 'yeolsBlog',
+    limit: 2,
+    order: ['-sys.createdAt'],
+  });
+
+  return response.items.map(parseContentfulBlogPost);
 });
