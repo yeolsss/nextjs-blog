@@ -14,9 +14,12 @@ interface Props {
 const Post = async ({ params }: Props) => {
   const { slug } = params;
   const post = await fetchBlogPostBySlug(slug);
+  const searchParams = {
+    category: post?.category,
+  };
   return (
     <>
-      <Categories />
+      <Categories searchParams={searchParams} type={'post'} />
       <div
         className={`rounded-[1.5rem] bg-backgroundColor3 px-[1.6rem] py-[2.4rem] ${containerStyles}`}
       >

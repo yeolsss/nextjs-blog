@@ -1,5 +1,5 @@
 import { fetchHomeBlogPosts } from '@/api/contentfulLib';
-import PostCard from '@/components/post/PostCard';
+import PostCard from '@/components/homePost/PostCard';
 
 const PostList = async () => {
   const posts = await fetchHomeBlogPosts();
