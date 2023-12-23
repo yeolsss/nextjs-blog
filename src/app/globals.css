@@ -1,3 +1,4 @@
+@import 'github-markdown-css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,19 +8,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,21 +97,34 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -50,18 +132,61 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+input {
+  outline: none;
+  background-color: unset;
+}
 
 /*typography*/
-*{
+* {
   box-sizing: border-box;
 }
-:root {
+@font-face {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;700&display=swap');
+}
+@font-face {
+  font-family: 'IBM Plex Sans', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;700&display=swap');
+}
+@font-face {
+  font-family: 'D2Coding';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-html{
+:root {
+  --primaryColor: #7e91b4;
+  --secondaryColor: #ecdec5;
+  --accentColor: #385fad;
+  --textColor: #120d02;
+  --backgroundColor1: #ffffff;
+  --backgroundColor2: #ededed;
+  --backgroundColor3: #d9d9d9;
+  --postCardBgColor: #cac9c7;
+  --ibm-plex-sans-kr: IBM Plex Sans KR, IBM Plex Sans;
+}
+
+:root.dark {
+  --primaryColor: #4b5e81;
+  --secondaryColor: #3a2d13;
+  --accentColor: #5279c7;
+  --textColor: #fdf8ed;
+  --backgroundColor1: #000000;
+  --backgroundColor2: #121212;
+  --backgroundColor3: #252525;
+  --postCardBgColor: #272624;
+  --ibm-plex-sans-kr: IBM Plex Sans KR, IBM Plex Sans;
+}
+
+html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   width: 100vw;
+  @apply bg-backgroundColor2 font-sans text-textColor transition-colors duration-200 ease-in;
 }

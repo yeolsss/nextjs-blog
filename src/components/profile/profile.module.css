@@ -1,0 +1,36 @@
+.visibleProfileWrapper {
+  @apply bg-backgroundColor3 text-textColor absolute left-0 top-0 -z-10 rounded-[1.6rem] transition-all duration-200 ease-in;
+  width: 100%;
+  height: calc(100% + 1.5rem);
+}
+
+.visibleProfileWrapper.hide {
+  width: 0;
+  height: 0;
+}
+
+.profileDescriptionWrapper {
+  @apply mt-[2.4rem];
+  width: auto;
+  height: auto;
+  opacity: 1;
+  transition:
+    opacity 0.2s ease-in,
+    width 0.2s ease-in,
+    height 0.2s ease-in,
+    padding 0.2s ease-in;
+  overflow: hidden;
+}
+.profileDescriptionWrapper.hide {
+  padding: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.profileDescriptionText {
+  @apply visible opacity-90;
+}
+.profileDescriptionText.hide {
+  @apply invisible opacity-0;
+}
