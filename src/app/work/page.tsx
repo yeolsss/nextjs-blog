@@ -1,3 +1,9 @@
+import { containerStyles } from '@/style/styles';
+
 export default function Work() {
-  return <div className={'text-[1.6rem]'}>About</div>;
+  return (
+    <main className={`${containerStyles}`}>
+      <h1>Work</h1>
+    </main>
+  );
 }

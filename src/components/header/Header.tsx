@@ -13,7 +13,7 @@ const Header = () => {
   const segment = useSegment();
   const headerLink: IHeaderLink[] = [
     { src: '/', name: 'Home' },
-    { src: '/work', name: 'Work' },
+    // { src: '/work', name: 'Work' },
     { src: '/posts', name: 'Post' },
   ];
 
