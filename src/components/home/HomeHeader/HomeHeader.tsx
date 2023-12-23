@@ -12,7 +12,7 @@ const HomeHeader = () => {
       <span
         className={`min-h-[${ST_MIN_HEIGHT}rem] flex items-end text-[1.4rem] text-textColor`}
       >
-        <Link href={'/post'}>전체 포스트 보기</Link>
+        <Link href={'/posts'}>전체 포스트 보기</Link>
       </span>
     </section>
   );
