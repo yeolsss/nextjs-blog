@@ -1,10 +1,32 @@
 import { containerStyles } from '@/style/styles';
 import Link from 'next/link';
 import { fetchBlogCategories } from '@/api/contentfulLib';
+import { Category } from '@/components/category/category/Category';
 
-const Categories = async () => {
+interface Props {
+  searchParams?: {
+    category?: string;
+    search?: string;
+  };
+  type: string;
+}
+
+const Categories = async ({ searchParams, type }: Props) => {
   const fetchCategories = await fetchBlogCategories();
   const categories = Object.entries(fetchCategories);
+
+  const { category: categoryUrl = '', search } = searchParams ?? {};
+
+  const queryUrl = (category: string) => {
+    let baseUrl = `/posts`;
+    if (search) {
+      baseUrl += `/?search=${search}`;
+      if (categoryUrl === category) return baseUrl;
+      else return (baseUrl += `&category=${category}`);
+    }
+    if (categoryUrl === category) return baseUrl;
+    return `/posts/?category=${category}`;
+  };
 
   return (
     <section
@@ -12,11 +34,22 @@ const Categories = async () => {
     >
       {categories.map((category, index) => (
         <>
-          <Link key={category + String(index)} href={'#'}>
-            <p className={'text-[1.4rem] opacity-75 hover:font-bold'}>
-              {category[0]}({category[1]})
-            </p>
-          </Link>
+          {type === 'posts' ? (
+            <Link key={category + String(index)} href={queryUrl(category[0])}>
+              <Category
+                category={category}
+                categoryUrl={categoryUrl}
+                type={type}
+              />
+            </Link>
+          ) : (
+            <Category
+              category={category}
+              categoryUrl={categoryUrl}
+              type={type}
+            />
+          )}
+
           {index < categories.length - 1 && (
             <div
               className={'h-[0.4rem] w-[0.4rem] rounded-full bg-textColor'}

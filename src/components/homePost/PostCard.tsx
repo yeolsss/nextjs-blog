@@ -1,14 +1,14 @@
 import { BlogPost } from '@/api/contentfulLib';
 import transDate from '@/util/transDate';
-import Content from '@/components/post/content/Content';
-import Thumbnail from '@/components/post/thumbnail/Thumbnail';
+import Content from '@/components/homePost/content/Content';
+import Thumbnail from '@/components/homePost/thumbnail/Thumbnail';
 import { IContentfulImage } from '@/api/contentFulImage';
 import Link from 'next/link';
 
-interface IProps {
+interface Props {
   post: BlogPost;
 }
-const PostCard = ({ post }: IProps) => {
+const PostCard = ({ post }: Props) => {
   const { slug, createdAt, thumbnail, content, tags, title, category } = post;
   const contentfulImage: IContentfulImage = {
     src: thumbnail?.src ? 'https:' + thumbnail.src : '/images/image 1.png',
@@ -19,7 +19,7 @@ const PostCard = ({ post }: IProps) => {
 
   return (
     <article className={'mt-[4rem] px-[1.6rem] py-[0.8rem]'}>
-      <Link href={`/post/${slug}`}>
+      <Link href={`/posts/${slug}`}>
         <div className={'flex justify-between'}>
           <h2
             className={

@@ -59,17 +59,25 @@ export const fetchBlogPosts = cache(async function (searchParams?: {
   category?: string;
   search?: string;
 }): Promise<BlogPost[]> {
-  // filter 처리 할지 조건에 맞는 api 호출 할지 생각
-
   const query: QueryOption = {
     content_type: 'yeolsBlog',
     order: ['-sys.createdAt'],
   };
   if (searchParams?.category) query['fields.category'] = searchParams.category;
-  if (searchParams?.search) query['fields.search'] = searchParams.search;
 
   const response = await client.getEntries<TypeYeolsBlogSkeleton>(query);
-  console.log(response);
+  // category만 맞는 애들 가져오고.. 그 다음에 search filter적용
+  if (searchParams?.search) {
+    const filtered = response.items.filter((item) => {
+      if (
+        item.fields.title.includes(searchParams.search!) ||
+        item.fields.content?.includes(searchParams.search!)
+      )
+        return item;
+    });
+    return filtered.map(parseContentfulBlogPost);
+  }
+
   return response.items.map(parseContentfulBlogPost);
 });
 
