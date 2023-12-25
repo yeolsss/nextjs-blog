@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './header.module.css';
 import useSegment from '@/hooks/useSegment';
+import { containerStyles } from '@/style/styles';
 
 interface IHeaderLink {
   src: string;
@@ -13,15 +14,13 @@ const Header = () => {
   const segment = useSegment();
   const headerLink: IHeaderLink[] = [
     { src: '/', name: 'Home' },
-    // { src: '/work', name: 'Work' },
+    { src: '/work', name: 'Work' },
     { src: '/posts', name: 'Post' },
   ];
 
   return (
     <header
-      className={
-        'mx-auto my-0 mt-[2.4rem] flex max-w-[100rem] justify-between px-[1.6rem]'
-      }
+      className={`mx-auto my-0 mt-[2.4rem] flex  justify-between ${containerStyles}`}
     >
       <div className={'flex h-[100%] justify-center'}>
         <Link href={'/'}>

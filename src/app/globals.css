@@ -158,27 +158,31 @@ input {
 }
 
 :root {
-  --primaryColor: #7e91b4;
+  --primaryColor: #4b5e81;
+  --accentColor: #5279c7;
   --secondaryColor: #ecdec5;
-  --accentColor: #385fad;
   --textColor: #120d02;
   --backgroundColor1: #ffffff;
   --backgroundColor2: #ededed;
   --backgroundColor3: #d9d9d9;
   --postCardBgColor: #cac9c7;
   --ibm-plex-sans-kr: IBM Plex Sans KR, IBM Plex Sans;
+  --inputDefaultColor: #ffeaa7;
+  --inputFocusColor: #fdcb6e;
 }
 
 :root.dark {
-  --primaryColor: #4b5e81;
+  --primaryColor: #ffeaa7;
+  --accentColor: #fdcb6e;
   --secondaryColor: #3a2d13;
-  --accentColor: #5279c7;
   --textColor: #fdf8ed;
   --backgroundColor1: #000000;
   --backgroundColor2: #121212;
   --backgroundColor3: #252525;
   --postCardBgColor: #272624;
   --ibm-plex-sans-kr: IBM Plex Sans KR, IBM Plex Sans;
+  --inputDefaultColor: #ffeaa7;
+  --inputFocusColor: #fdcb6e;
 }
 
 html {
