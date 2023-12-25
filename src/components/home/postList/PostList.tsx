@@ -3,6 +3,7 @@ import PostCard from '@/components/homePost/PostCard';
 
 const PostList = async () => {
   const posts = await fetchHomeBlogPosts();
+
   return (
     <>
       {posts.map((post) => {

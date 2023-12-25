@@ -18,6 +18,8 @@ const config: Config = {
         backgroundColor2: 'var(--backgroundColor2)',
         backgroundColor3: 'var(--backgroundColor3)',
         postCardBgColor: 'var(--postCardBgColor)',
+        inputDefaultColor: 'var(--inputDefaultColor)',
+        inputFocusColor: 'var(--inputFocusColor)',
       },
       screens: {
         'max-sm': { max: '639px' },

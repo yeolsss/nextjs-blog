@@ -6,7 +6,7 @@ import ProfileInfo from '@/components/profile/profileInfo/ProfileInfo';
 const Profile = () => {
   return (
     <section
-      className={`z-2 relative  mx-auto mb-[1.6rem] mt-[3.6rem] h-auto w-full max-w-[52rem] rounded-[1.6rem] px-[1.6rem] py-[0.8rem] text-textColor md:max-w-[52rem] lg:max-w-[69rem] max-sm:max-w-[31rem]`}
+      className={`z-2 relative  mx-auto mb-[1.6rem] mt-[3.6rem] h-auto w-full max-w-[52rem] rounded-[1.6rem] px-[1.6rem] py-[0.8rem] text-textColor md:max-w-[52rem] lg:max-w-[100rem] max-sm:max-w-[31rem]`}
     >
       {/* 가상 div */}
       <div className={styles.visibleProfileWrapper}></div>
