@@ -18,7 +18,7 @@ const PostCard = ({ post }: Props) => {
   };
 
   return (
-    <article className={'mt-[4rem] px-[1.6rem] py-[0.8rem]'}>
+    <article className={'group mt-[4rem] px-[1.6rem] py-[0.8rem]'}>
       <Link href={`/posts/${slug}`}>
         <div className={'flex justify-between'}>
           <h2
@@ -43,7 +43,7 @@ const PostCard = ({ post }: Props) => {
           <Content content={content} />
           <div
             className={
-              'relative mt-[2rem] h-full min-h-[14.5rem] w-full overflow-hidden rounded-2xl'
+              'relative mt-[2rem] h-full min-h-[24.5rem] w-full overflow-hidden rounded-2xl'
             }
           >
             <Thumbnail thumbnail={contentfulImage} />

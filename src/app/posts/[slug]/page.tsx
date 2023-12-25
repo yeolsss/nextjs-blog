@@ -1,8 +1,7 @@
 import { fetchBlogPostBySlug } from '@/api/contentfulLib';
 import ReactMarkdown from 'react-markdown';
 import { containerStyles } from '@/style/styles';
-
-import styles from './post.module.scss';
+import styles from '@/style/markdown.module.scss';
 import Categories from '@/components/category/Categories';
 import BackButton from '@/components/backButton/BackButton';
 
@@ -24,7 +23,7 @@ const Post = async ({ params }: Props) => {
         className={`rounded-[1.5rem] bg-backgroundColor3 px-[1.6rem] py-[2.4rem] ${containerStyles}`}
       >
         <nav>
-          <BackButton category={post?.category!} />
+          <BackButton title={post?.category!} />
         </nav>
         <ReactMarkdown className={styles['markdown']}>
           {post?.content}

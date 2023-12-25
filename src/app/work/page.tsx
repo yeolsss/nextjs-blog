@@ -1,9 +1,17 @@
 import { containerStyles } from '@/style/styles';
+import { fetchBlogWorks } from '@/api/contentfulLib';
+import { WorkCard } from '@/components/work/WorkCard';
 
-export default function Work() {
+const Work = async () => {
+  const works = await fetchBlogWorks();
   return (
-    <main className={`${containerStyles}`}>
-      <h1>Work</h1>
+    <main className={`mt-[5rem] grid grid-cols-2 ${containerStyles}`}>
+      {works.length === 0 ? (
+        <div>검색된 Work가 없습니다.</div>
+      ) : (
+        works.map((work) => <WorkCard key={work.slug} work={work} />)
+      )}
     </main>
   );
-}
+};
+export default Work;

@@ -12,7 +12,9 @@ const Thumbnail = (props: Props) => {
         alt={thumbnail?.alt!}
         fill
         objectFit={'cover'}
-        className={'left-0 top-0 h-auto !w-[100%] '}
+        className={
+          'left-0 top-0 h-auto !w-[100%] transition-all   duration-200 ease-in group-hover:scale-105'
+        }
       />
     </>
   );

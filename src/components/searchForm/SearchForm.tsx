@@ -1,7 +1,7 @@
 'use client';
 import { containerStyles } from '@/style/styles';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { IoSearch } from 'react-icons/io5';
 
 const SearchForm = () => {
@@ -11,7 +11,7 @@ const SearchForm = () => {
 
   const categoryParams = searchParams.get('category');
   const searchKeywordParams = searchParams.get('search');
-  const handleOnSubmitSearch = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleOnSubmitSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (categoryParams) {
       router.push(`/posts/?category=${categoryParams}&search=${searchKeyword}`);
@@ -19,6 +19,10 @@ const SearchForm = () => {
     }
     router.push(`/posts/?search=${searchKeyword}`);
     setSearchKeyword('');
+  };
+
+  const handleOnChangeSearch = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchKeyword(event.target.value);
   };
 
   return (
@@ -29,8 +33,8 @@ const SearchForm = () => {
       <input
         type="text"
         placeholder="Search"
-        className="front-sans peer mr-[1.6rem] min-h-[2.4rem] w-[90%] border-b-[0.2rem] border-primaryColor px-1 pb-1 text-[1.6rem] transition-[border-color] duration-200 ease-in focus:border-accentColor"
-        onChange={(e) => setSearchKeyword(e.target.value)}
+        className="front-sans peer mr-[1.6rem] min-h-[4rem] w-[100%] border-b-[0.2rem] border-b-primaryColor px-1 pb-1 text-[2.4rem] transition-[border-color] duration-200 ease-in focus:border-b-accentColor"
+        onChange={handleOnChangeSearch}
       />
       <button
         type={'submit'}
