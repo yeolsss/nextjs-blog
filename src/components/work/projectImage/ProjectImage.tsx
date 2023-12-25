@@ -8,7 +8,7 @@ interface Props {
 const ProjectImage = ({ projectImg, title }: Props) => {
   return (
     <Image
-      src={`https://${projectImg?.src!}`}
+      src={`https:${projectImg?.src!}`}
       alt={title}
       width={projectImg?.width}
       height={projectImg?.height}
