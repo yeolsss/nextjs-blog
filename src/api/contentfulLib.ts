@@ -115,10 +115,6 @@ export const fetchBlogCategories = cache(
     });
 
     if (response.items.length > 0) {
-      const categories = response.items
-        .map((item) => item.fields.category && item.fields.category)
-        .filter(Boolean);
-
       return response.items.reduce<Record<string, number>>((acc, cur) => {
         acc[cur.fields.category] = (acc[cur.fields.category] || 0) + 1;
         return acc;
@@ -136,3 +132,17 @@ export const fetchBlogWorks = cache(async (): Promise<BlogWork[]> => {
 
   return response.items.map(parseContentfulBlogWork);
 });
+
+export const fetchBlogWork = cache(
+  async (slug: string): Promise<BlogWork | null> => {
+    const response = await client.getEntries<TypeYeolsWorksSkeleton>({
+      content_type: 'yeolsWorks',
+      limit: 1,
+      'fields.slug': slug,
+    });
+
+    if (response.items.length > 0)
+      return parseContentfulBlogWork(response.items[0]);
+    else return null;
+  },
+);
