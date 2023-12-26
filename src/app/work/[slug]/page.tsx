@@ -85,7 +85,7 @@ const Work = async ({ params }: Props) => {
       <div className="flex items-center gap-x-[1rem] text-[1.6rem]">
         <span className=" text-primaryColor hover:text-accentColor">Skill</span>{' '}
         :
-        <div className="flex flex-wrap gap-x-[1rem]">
+        <div className="flex flex-wrap gap-[1rem]">
           {stack?.map((item) => (
             <div
               className="flex min-h-[3rem] items-center justify-center rounded-[1.5rem] bg-accentColor px-[1rem] py-[0.5rem] text-[1.6rem] font-bold text-backgroundColor1"
