@@ -84,7 +84,7 @@ export const fetchBlogPosts = cache(
   },
 );
 
-export const fetchHomeBlogPosts = cache(async () => {
+export const fetchHomeBlogPosts = async () => {
   const response = await client.getEntries<TypeYeolsBlogSkeleton>({
     content_type: 'yeolsBlog',
     limit: 2,
@@ -92,7 +92,7 @@ export const fetchHomeBlogPosts = cache(async () => {
   });
 
   return response.items.map(parseContentfulBlogPost);
-});
+};
 
 export const fetchBlogPostBySlug = cache(
   async (slug: string): Promise<BlogPost | null> => {

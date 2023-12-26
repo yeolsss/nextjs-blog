@@ -36,7 +36,7 @@ const Work = async ({ params }: Props) => {
 
   return (
     <main
-      className={`mt-[5rem] flex flex-col gap-y-[2rem] rounded-[0.8rem] bg-backgroundColor3 px-[2.4rem] py-[2rem] ${containerStyles}`}
+      className={`mt-[5rem] flex flex-col gap-y-[2rem] rounded-[0.8rem] bg-backgroundColor3 px-[4rem] py-[3rem] ${containerStyles}`}
     >
       <BackButton title={title} />
 
