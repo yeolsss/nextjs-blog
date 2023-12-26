@@ -20,7 +20,7 @@ const Post = async ({ params }: Props) => {
     <>
       <Categories searchParams={searchParams} type={'post'} />
       <div
-        className={`rounded-[1.5rem] bg-backgroundColor3 px-[1.6rem] py-[2.4rem] ${containerStyles}`}
+        className={`rounded-[1.5rem] bg-backgroundColor3 px-[4rem] py-[3rem] ${containerStyles}`}
       >
         <nav>
           <BackButton title={post?.category!} />
