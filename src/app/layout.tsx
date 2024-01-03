@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import * as React from 'react';
+import { Suspense } from 'react';
 import CustomThemeProvider from '@/providers/CustomThemeProvider';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
 import Profile from '@/components/profile/Profile';
+import LoadingSkeleton from '@/app/LoadingSkeleton';
 
 export const metadata: Metadata = {
   title: 'Yeols Blog',
@@ -22,7 +24,7 @@ export default function RootLayout({
         <CustomThemeProvider>
           <Header />
           <Profile />
-          {children}
+          <Suspense fallback={<LoadingSkeleton />}>{children}</Suspense>
           <Footer />
         </CustomThemeProvider>
       </body>
