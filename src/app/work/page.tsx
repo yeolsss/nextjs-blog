@@ -1,17 +1,14 @@
-import { containerStyles } from '@/style/styles';
-import { fetchBlogWorks } from '@/api/contentfulLib';
-import { WorkCard } from '@/components/work/WorkCard';
+import WorkList from '@/components/work/WorkList';
+import { Suspense } from 'react';
+import WorkListSkeleton from '@/components/skeletons/WorkListSkeleton';
 
 const Work = async () => {
-  const works = await fetchBlogWorks();
   return (
-    <main className={`mt-[5rem] grid grid-cols-2 ${containerStyles}`}>
-      {works.length === 0 ? (
-        <div>검색된 Work가 없습니다.</div>
-      ) : (
-        works.map((work) => <WorkCard key={work.slug} work={work} />)
-      )}
-    </main>
+    <>
+      <Suspense fallback={<WorkListSkeleton />}>
+        <WorkList />
+      </Suspense>
+    </>
   );
 };
 export default Work;

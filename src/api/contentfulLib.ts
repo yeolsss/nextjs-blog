@@ -84,15 +84,14 @@ export const fetchBlogPosts = cache(
   },
 );
 
-export const fetchHomeBlogPosts = cache(async () => {
+export const fetchHomeBlogPosts = async () => {
   const response = await client.getEntries<TypeYeolsBlogSkeleton>({
     content_type: 'yeolsBlog',
     limit: 2,
     order: ['-sys.createdAt'],
   });
-
   return response.items.map(parseContentfulBlogPost);
-});
+};
 
 export const fetchBlogPostBySlug = cache(
   async (slug: string): Promise<BlogPost | null> => {
@@ -129,7 +128,6 @@ export const fetchBlogWorks = cache(async (): Promise<BlogWork[]> => {
     content_type: 'yeolsWorks',
     order: ['-sys.createdAt'],
   });
-
   return response.items.map(parseContentfulBlogWork);
 });
 
