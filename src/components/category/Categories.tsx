@@ -2,12 +2,9 @@ import { containerStyles } from '@/style/styles';
 import Link from 'next/link';
 import { fetchBlogCategories } from '@/api/contentfulLib';
 import { Category } from '@/components/category/category/Category';
+import { SearchProps } from '@/app/posts/page';
 
-interface Props {
-  searchParams?: {
-    category?: string;
-    search?: string;
-  };
+interface Props extends SearchProps {
   type: string;
 }
 
