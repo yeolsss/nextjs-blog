@@ -90,7 +90,6 @@ export const fetchHomeBlogPosts = async () => {
     limit: 2,
     order: ['-sys.createdAt'],
   });
-
   return response.items.map(parseContentfulBlogPost);
 };
 
@@ -129,7 +128,6 @@ export const fetchBlogWorks = cache(async (): Promise<BlogWork[]> => {
     content_type: 'yeolsWorks',
     order: ['-sys.createdAt'],
   });
-
   return response.items.map(parseContentfulBlogWork);
 });
 
