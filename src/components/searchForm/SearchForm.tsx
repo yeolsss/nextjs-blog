@@ -5,12 +5,12 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import { IoSearch } from 'react-icons/io5';
 
 const SearchForm = () => {
-  const [searchKeyword, setSearchKeyword] = useState('');
   const searchParams = useSearchParams();
+  const searchKeywordParams = searchParams.get('search');
   const router = useRouter();
+  const [searchKeyword, setSearchKeyword] = useState(searchKeywordParams);
 
   const categoryParams = searchParams.get('category');
-  const searchKeywordParams = searchParams.get('search');
   const handleOnSubmitSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (categoryParams) {

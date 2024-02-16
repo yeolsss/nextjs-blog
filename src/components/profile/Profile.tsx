@@ -6,7 +6,7 @@ import ProfileInfo from '@/components/profile/profileInfo/ProfileInfo';
 const Profile = () => {
   return (
     <section
-      className={`z-2 relative  mx-auto mb-[1.6rem] mt-[3.6rem] h-auto w-full max-w-[52rem] rounded-[1.6rem] px-[1.6rem] py-[0.8rem] text-textColor md:max-w-[52rem] lg:max-w-[100rem] max-sm:max-w-[31rem]`}
+      className={`z-2 relative  mx-auto mb-[1.6rem] mt-[3.6rem] h-auto w-full max-w-[52rem] rounded-[1.6rem] px-[3.2rem] py-[2.8rem] text-textColor md:max-w-[52rem] lg:max-w-[100rem] max-sm:max-w-[31rem]`}
     >
       {/* 가상 div */}
       <div className={styles.visibleProfileWrapper}></div>
@@ -28,18 +28,40 @@ const Profile = () => {
           <p
             className={`text-[1.6rem] font-normal leading-[2.38rem] text-textColor ${styles.profileDescriptionText}`}
           >
-            안녕하세요. 웹 개발 2년차로 활동중인 개발자 입니다. 단순히 책이나
-            영상으로 접하는 코딩이 아닌, 실무에서 맞닥드렸던 문제를 해결하며
-            겪었던 경험 위주에 내용을 작성 예정이며 블로그를 읽는 모든 분에게
-            도움이 되었으면 좋겠습니다.
+            안녕하세요. 프론트엔드 개발자 권경열입니다.
+            <br />
+            <br />
+            <span className={'text-[1.6rem] font-bold'}>
+              약 4년간의 jsp(java)개발 경력
+            </span>
+            <br />
+            <p className={'text-[1.4rem] '}>
+              약 4년간의 jsp(java)개발 경력을 통해 프로젝트의 전체적인 데이터
+              흐름을 이해하고, 이를 기반으로 프론트엔드의 필요한 기능을
+              효율적으로 구현할 수 있는 개발자입니다.
+            </p>
+            <br />
+            <span className={'text-[1.6rem] font-bold'}>
+              함께 성장하고 싶은 개발자
+            </span>
+            <br />
+            <p className={'text-[1.4rem]'}>
+              부트캠프 초기에, 저는 JavaScript 과제를 진행하며 비전공자들에게
+              과제의 전체적인 흐름을 이해시키는 데 도움을 주기 위해 라이브 코딩
+              세션을 진행했습니다. 이 과정에서 과제를 처음부터 끝까지 함께
+              코딩하며, 참여자들이 각 단계를 명확히 이해할 수 있도록 했습니다.
+              이 경험을 통해 다양한 문제를 공유하고 함께 해결하며 많은 성장을
+              이루어냈습니다.
+            </p>
           </p>
         </div>
 
         <div className={'mt-[1.5rem]'}>
           <span
-            className={`mt-[1rem] text-[1.4rem] font-bold text-textColor ${styles.profileDescriptionText}`}
+            className={`mt-[1rem] text-[1.4rem] font-bold text-textColor  ${styles.profileDescriptionText}`}
           >
-            HTML/CSS, Javascript, Typescript, Gatsby, Zustand, Redux:toolkit
+            HTML/CSS, Javascript, Typescript, React, Next.js, Gatsby, Zustand,
+            Redux:toolkit, TailwindCSS, Styled-components, Java, Jsp
           </span>
         </div>
       </div>
