@@ -1,6 +1,5 @@
 import { FaGithub } from 'react-icons/fa';
 import { BsMailboxFlag } from 'react-icons/bs';
-import { GrDocumentUser } from 'react-icons/gr';
 import { IconType } from 'react-icons';
 
 interface ILinks {

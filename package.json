@@ -25,7 +25,6 @@
     "remark-react": "^9.0.1"
   },
   "devDependencies": {
-    "sass": "^1.69.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -36,7 +35,8 @@
     "postcss": "^8",
     "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.9",
-    "tailwindcss": "^3.3.0",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
 }
