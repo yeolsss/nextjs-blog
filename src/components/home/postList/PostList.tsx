@@ -1,3 +1,4 @@
+'use server';
 import { fetchHomeBlogPosts } from '@/api/contentfulLib';
 import PostCard from '@/components/homePost/PostCard';
 
