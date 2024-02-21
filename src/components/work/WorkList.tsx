@@ -5,7 +5,9 @@ import { fetchBlogWorks } from '@/api/contentfulLib';
 const WorkList = async () => {
   const works = await fetchBlogWorks();
   return (
-    <main className={`mt-[5rem] grid grid-cols-2 ${containerStyles}`}>
+    <main
+      className={`mt-[5rem] grid grid-cols-2 gap-[1rem] ${containerStyles}`}
+    >
       {works.length === 0 ? (
         <div>검색된 Work가 없습니다.</div>
       ) : (

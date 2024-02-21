@@ -2,6 +2,7 @@ import styles from './profile.module.css';
 import ProfileImage from '@/components/profile/profileImage/ProfileImage';
 import ThemeButton from '@/components/profile/themeButton/ThemeButton';
 import ProfileInfo from '@/components/profile/profileInfo/ProfileInfo';
+import { useState } from 'react';
 
 const Profile = () => {
   return (

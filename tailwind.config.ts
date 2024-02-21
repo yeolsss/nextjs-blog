@@ -22,7 +22,7 @@ const config: Config = {
         inputFocusColor: 'var(--inputFocusColor)',
       },
       screens: {
-        'max-sm': { max: '639px' },
+        'max-sm': { max: '767px' },
         sm: '640px',
         md: '768px',
         lg: '1024px',
