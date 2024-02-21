@@ -7,7 +7,10 @@ export function WorkCard(props: { work: BlogWork }) {
   return (
     <Link href={`/work/${props.work.slug}`} className="mt-[3rem]">
       <div className="group">
-        <div className="overflow-hidden rounded-[0.8rem] shadow-textColor group-hover:shadow-2xl">
+        <div
+          className="overflow-hidden
+         rounded-[0.8rem] shadow-textColor group-hover:shadow-2xl md:max-h-[14.2rem] md:max-w-[28rem] lg:max-h-[28rem] lg:max-w-[50rem] max-sm:max-h-[8.4rem] max-sm:max-w-[15rem]"
+        >
           <ProjectImage
             projectImg={props.work.projectImg[0]!}
             title={props.work.title}
