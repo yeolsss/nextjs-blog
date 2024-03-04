@@ -2,12 +2,11 @@ import styles from './profile.module.css';
 import ProfileImage from '@/components/profile/profileImage/ProfileImage';
 import ThemeButton from '@/components/profile/themeButton/ThemeButton';
 import ProfileInfo from '@/components/profile/profileInfo/ProfileInfo';
-import { useState } from 'react';
 
 const Profile = () => {
   return (
     <section
-      className={`z-2 relative  mx-auto mb-[1.6rem] mt-[3.6rem] h-auto w-full max-w-[52rem] rounded-[1.6rem] px-[3.2rem] py-[2.8rem] text-textColor md:max-w-[52rem] lg:max-w-[100rem] max-sm:max-w-[31rem]`}
+      className={`z-2 relative  mx-auto   h-auto w-full max-w-[52rem] rounded-[1.6rem] px-[3.2rem] py-[2.8rem] text-textColor md:max-w-[52rem] lg:max-w-[100rem] max-sm:max-w-[31rem]`}
     >
       {/* 가상 div */}
       <div className={styles.visibleProfileWrapper}></div>
@@ -55,15 +54,6 @@ const Profile = () => {
               이루어냈습니다.
             </p>
           </p>
-        </div>
-
-        <div className={'mt-[1.5rem]'}>
-          <span
-            className={`mt-[1rem] text-[1.4rem] font-bold text-textColor  ${styles.profileDescriptionText}`}
-          >
-            HTML/CSS, Javascript, Typescript, React, Next.js, Gatsby, Zustand,
-            Redux:toolkit, TailwindCSS, Styled-components, Java, Jsp
-          </span>
         </div>
       </div>
     </section>
