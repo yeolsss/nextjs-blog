@@ -1,7 +1,7 @@
 .visibleProfileWrapper {
-  @apply bg-backgroundColor3 text-textColor absolute left-0 top-0 -z-10 rounded-[1.6rem] transition-all duration-200 ease-in;
+  @apply absolute left-0 top-0 -z-10 rounded-[1.6rem] bg-backgroundColor3 text-textColor transition-all duration-200 ease-in;
   width: 100%;
-  height: calc(100% + 1.5rem);
+  height: calc(100%);
 }
 
 .visibleProfileWrapper.hide {

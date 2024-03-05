@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <CustomThemeProvider>
-        <body>
+        <body className={'flex flex-col gap-[2rem]'}>
           <Header />
           <Profile />
           {children}

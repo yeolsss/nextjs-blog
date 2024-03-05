@@ -6,12 +6,13 @@ const ProfileImage = () => {
     <div>
       <div
         className={
-          'flex h-[8rem] w-[8rem] cursor-pointer items-center justify-center overflow-hidden rounded-full'
+          'flex h-[8rem] w-[8rem] items-center justify-center overflow-hidden rounded-full'
         }
       >
         <Image
           src="/images/yeols.jpg"
           alt="profile photo"
+          style={{ marginTop: '2rem' }}
           width={100}
           height={100}
         />
