@@ -2,6 +2,7 @@ import Link from 'next/link';
 import transDate from '@/util/transDate';
 import { BlogWork } from '@/api/contentfulLib';
 import ProjectImage from './projectImage/ProjectImage';
+import Badge from '@/components/badges/Badge';
 
 export function WorkCard(props: { work: BlogWork }) {
   return (
@@ -25,14 +26,7 @@ export function WorkCard(props: { work: BlogWork }) {
           </span>
         </div>
         <div className="mt-[2rem] flex flex-wrap gap-x-[1rem] gap-y-[0.5rem]">
-          {props.work.focus?.map((item) => (
-            <div
-              className="flex min-h-[3rem] items-center justify-center rounded-[1.5rem] bg-accentColor px-[1rem] py-[0.5rem] text-[1.6rem] font-bold text-backgroundColor1"
-              key={item}
-            >
-              <span className="mt-[0.4rem]">{item}</span>
-            </div>
-          ))}
+          {props.work.focus?.map((item) => <Badge key={item}>{item}</Badge>)}
         </div>
       </div>
     </Link>

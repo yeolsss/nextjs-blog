@@ -4,6 +4,7 @@ import { containerStyles } from '@/style/styles';
 import ReactMarkdown from 'react-markdown';
 import styles from '@/style/markdown.module.scss';
 import transDate from '@/util/transDate';
+import LabelTag from '@/components/labelTag/LabelTag';
 
 interface Props {
   params: {
@@ -68,33 +69,11 @@ const Work = async ({ params }: Props) => {
       </div>
 
       <div className="flex items-center gap-x-[1rem] text-[1.6rem]">
-        <span className=" text-primaryColor hover:text-accentColor">Focus</span>{' '}
-        :
-        <div className="flex gap-x-[1rem]">
-          {focus?.map((item) => (
-            <div
-              className="flex min-h-[3rem] items-center justify-center rounded-[1.5rem] bg-accentColor px-[1rem] py-[0.5rem] text-[1.6rem] font-bold text-backgroundColor1"
-              key={item}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
+        <LabelTag data={focus}>Focus</LabelTag>
       </div>
 
       <div className="flex items-center gap-x-[1rem] text-[1.6rem]">
-        <span className=" text-primaryColor hover:text-accentColor">Skill</span>{' '}
-        :
-        <div className="flex flex-wrap gap-[1rem]">
-          {stack?.map((item) => (
-            <div
-              className="flex min-h-[3rem] items-center justify-center rounded-[1.5rem] bg-accentColor px-[1rem] py-[0.5rem] text-[1.6rem] font-bold text-backgroundColor1"
-              key={item}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
+        <LabelTag data={stack}>Skill</LabelTag>
       </div>
 
       <ReactMarkdown className={styles['markdown']}>
