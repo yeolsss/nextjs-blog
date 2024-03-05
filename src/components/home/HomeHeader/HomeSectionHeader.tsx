@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 
-const HomeHeader: React.FC<PropsWithChildren<{}>> = ({ children }) => {
+const HomeSectionHeader: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   const ST_MIN_HEIGHT = '3.6';
   return (
     <section
@@ -11,4 +11,4 @@ const HomeHeader: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   );
 };
 
-export default HomeHeader;
+export default HomeSectionHeader;
