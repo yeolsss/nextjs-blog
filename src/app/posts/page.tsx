@@ -1,9 +1,5 @@
-import Categories from '@/components/category/Categories';
 import * as React from 'react';
-import { Suspense } from 'react';
-import SearchForm from '@/components/searchForm/SearchForm';
-import PostList from '@/components/post/PostList';
-import PostListSkeleton from '@/components/skeletons/PostListSkeleton';
+import ComingSoon from '@/components/comingSoon/ComingSoon';
 
 export interface SearchProps {
   searchParams?: {
@@ -15,11 +11,12 @@ export interface SearchProps {
 const Posts = async ({ searchParams }: SearchProps) => {
   return (
     <>
-      <Categories searchParams={searchParams} type={'posts'} />
+      {/*<Categories searchParams={searchParams} type={'posts'} />
       <SearchForm />
       <Suspense fallback={<PostListSkeleton />}>
         <PostList searchParams={searchParams} />
-      </Suspense>
+      </Suspense>*/}
+      <ComingSoon />
     </>
   );
 };

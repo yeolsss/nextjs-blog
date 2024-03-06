@@ -18,14 +18,12 @@ async function Home() {
   return (
     <main className={'flex flex-col gap-[2rem]'}>
       <MainSection>
-        <>
-          <HomeSectionHeader>Skill Stack</HomeSectionHeader>
-          {Object.entries(skillStack).map(([key, value]) => (
-            <section key={key} className={'my-[0.8rem]'}>
-              <LabelTag data={value}>{key}</LabelTag>
-            </section>
-          ))}
-        </>
+        <HomeSectionHeader>Skill Stack</HomeSectionHeader>
+        {Object.entries(skillStack).map(([key, value]) => (
+          <section key={key} className={'my-[0.8rem]'}>
+            <LabelTag data={value}>{key}</LabelTag>
+          </section>
+        ))}
       </MainSection>
       <MainSection>
         <HomeSectionHeader>Career</HomeSectionHeader>
