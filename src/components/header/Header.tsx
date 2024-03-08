@@ -15,7 +15,7 @@ const Header = () => {
   const headerLink: IHeaderLink[] = [
     { src: '/', name: 'Home' },
     { src: '/work', name: 'Work' },
-    { src: '/posts', name: 'Post' },
+    { src: 'https://velog.io/@yeol10/posts', name: 'Post' },
   ];
 
   return (
