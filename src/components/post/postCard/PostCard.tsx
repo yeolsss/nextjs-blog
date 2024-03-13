@@ -1,6 +1,6 @@
 import { BlogPost } from '@/api/contentfulLib';
-import transDate from '@/util/transDate';
-import { parseMarkdown } from '@/util/parseMarkdown';
+import transDate from '@/feature/share/util/transDate';
+import { parseMarkdown } from '@/feature/share/util/parseMarkdown';
 import styles from './postCard.module.css';
 import Link from 'next/link';
 

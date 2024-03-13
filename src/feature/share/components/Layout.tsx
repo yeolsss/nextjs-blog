@@ -1,16 +1,15 @@
-import React from 'react';
-import Header from '@/components/header/Header';
+import React, { PropsWithChildren } from 'react';
 import Profile from '@/feature/share/components/profile/Profile';
 import Footer from '@/components/footer/Footer';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+interface Props extends PropsWithChildren {}
+const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <>
-      <Header />
+    <div>
       <Profile />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

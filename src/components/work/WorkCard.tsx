@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import transDate from '@/util/transDate';
+import transDate from '@/feature/share/util/transDate';
 import { BlogWork } from '@/api/contentfulLib';
 import ProjectImage from './projectImage/ProjectImage';
 import Badge from '@/components/badges/Badge';
