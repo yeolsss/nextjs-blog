@@ -1,5 +1,5 @@
 import { BlogPost } from '@/api/contentfulLib';
-import transDate from '@/util/transDate';
+import transDate from '@/feature/share/util/transDate';
 import Content from '@/components/homePost/content/Content';
 import Thumbnail from '@/components/homePost/thumbnail/Thumbnail';
 import { IContentfulImage } from '@/api/contentFulImage';

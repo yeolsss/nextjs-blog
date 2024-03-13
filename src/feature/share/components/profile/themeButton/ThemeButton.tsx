@@ -20,9 +20,15 @@ const ThemeButton = () => {
     <div>
       <button onClick={handleToggleTheme}>
         {theme === 'light' ? (
-          <CiLight className={styles.icon} />
+          <CiLight
+            style={{ width: '47px', height: '47px' }}
+            className={styles.icon}
+          />
         ) : (
-          <CiDark className={styles.icon} />
+          <CiDark
+            style={{ width: '47px', height: '47px' }}
+            className={styles.icon}
+          />
         )}
       </button>
     </div>
