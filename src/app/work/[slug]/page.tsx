@@ -3,7 +3,7 @@ import BackButton from '@/components/backButton/BackButton';
 import { containerStyles } from '@/style/styles';
 import ReactMarkdown from 'react-markdown';
 import styles from '@/style/markdown.module.scss';
-import transDate from '@/util/transDate';
+import transDate from '@/feature/share/util/transDate';
 import LabelTag from '@/components/labelTag/LabelTag';
 
 interface Props {
@@ -37,7 +37,7 @@ const Work = async ({ params }: Props) => {
 
   return (
     <main
-      className={`mt-[5rem] flex flex-col gap-y-[2rem] rounded-[0.8rem] bg-backgroundColor3 px-[4rem] py-[3rem] ${containerStyles}`}
+      className={`mt-[15rem] flex flex-col gap-y-[2rem] rounded-[0.8rem] bg-backgroundColor3 px-[4rem] py-[3rem] ${containerStyles}`}
     >
       <BackButton title={title} />
 
