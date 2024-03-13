@@ -4,8 +4,15 @@ import { PagePathContext } from '@/feature/home/context/PagePath';
 
 const Navigator = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const { landingRef, introductionRef, careerRef, skillsRef, scrollToSection } =
-    useContext(PagePathContext);
+  const {
+    landingRef,
+    introductionRef,
+    careerRef,
+    skillsRef,
+    educationRef,
+    trainingRef,
+    scrollToSection,
+  } = useContext(PagePathContext);
   const { scrollY } = useContext(ScrollContext);
 
   useEffect(() => {
@@ -50,6 +57,18 @@ const Navigator = () => {
             onClick={() => scrollToSection(careerRef)}
           >
             <span className="text-[2.4rem]">Career</span>
+          </li>
+          <li
+            className="cursor-pointer"
+            onClick={() => scrollToSection(educationRef)}
+          >
+            <span className="text-[2.4rem]">Education</span>
+          </li>
+          <li
+            className="cursor-pointer"
+            onClick={() => scrollToSection(trainingRef)}
+          >
+            <span className="text-[2.4rem]">Training</span>
           </li>
         </ul>
       </nav>

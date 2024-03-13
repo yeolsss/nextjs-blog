@@ -5,6 +5,8 @@ interface PagePathValue {
   introductionRef: React.RefObject<HTMLElement>;
   skillsRef: React.RefObject<HTMLElement>;
   careerRef: React.RefObject<HTMLElement>;
+  educationRef: React.RefObject<HTMLElement>;
+  trainingRef: React.RefObject<HTMLElement>;
   scrollToSection: (sectionRef?: React.RefObject<HTMLElement>) => void;
 }
 
@@ -13,6 +15,8 @@ const initialPagePathValue: PagePathValue = {
   introductionRef: { current: null },
   skillsRef: { current: null },
   careerRef: { current: null },
+  educationRef: { current: null },
+  trainingRef: { current: null },
   scrollToSection: () => {},
 };
 
@@ -25,6 +29,8 @@ const PagePath: React.FC<Props> = ({ children }) => {
   const introductionRef = useRef<HTMLElement | null>(null);
   const skillsRef = useRef<HTMLElement | null>(null);
   const careerRef = useRef<HTMLElement | null>(null);
+  const educationRef = useRef<HTMLElement | null>(null);
+  const trainingRef = useRef<HTMLElement | null>(null);
 
   const scrollToSection = (sectionRef?: React.RefObject<HTMLElement>) => {
     if (!sectionRef) window.scroll({ top: 0, behavior: 'smooth' });
@@ -38,6 +44,8 @@ const PagePath: React.FC<Props> = ({ children }) => {
     introductionRef,
     skillsRef,
     careerRef,
+    educationRef,
+    trainingRef,
     scrollToSection,
   };
   return (
