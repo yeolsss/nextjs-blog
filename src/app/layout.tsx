@@ -3,6 +3,7 @@ import './globals.css';
 import * as React from 'react';
 import CustomThemeProvider from '@/providers/CustomThemeProvider';
 import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 
 export const metadata: Metadata = {
   title: '권경열 | Portfolio',
@@ -20,6 +21,7 @@ export default function RootLayout({
         <body className={`relative flex flex-col`}>
           <Header />
           {children}
+          <Footer />
         </body>
       </CustomThemeProvider>
     </html>
