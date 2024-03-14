@@ -10,7 +10,10 @@ const Skills = () => {
   const skillStack = CreateSkillStack();
 
   return (
-    <section ref={skillsRef} className="h-aut flex flex-col gap-40 pt-[15rem] ">
+    <section
+      ref={skillsRef}
+      className="flex h-auto flex-col gap-40 pt-[15rem] "
+    >
       <div>
         <h1 className="text-9xl font-bold md:text-7xl lg:text-9xl max-sm:text-5xl">
           Skills

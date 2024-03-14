@@ -11,7 +11,7 @@ const IntroductionSection = () => {
   return (
     <section
       ref={introductionRef}
-      className="flex h-lvh flex-col gap-60 pt-[15rem] "
+      className="flex h-lvh min-h-[1240px] flex-col gap-60 pt-[15rem] "
     >
       <div>
         <h1 className="text-9xl font-bold md:text-7xl lg:text-9xl max-sm:text-5xl">

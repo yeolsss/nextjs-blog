@@ -7,7 +7,7 @@ import Training from '@/feature/home/component/Training';
 
 const Introduction: React.FC = () => {
   return (
-    <div>
+    <div className="h-auto">
       <IntroductionSection />
       <Skills />
       <Career />
