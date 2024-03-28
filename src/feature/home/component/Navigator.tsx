@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ScrollContext } from '@/feature/home/context/ScrollObserver';
 import { PagePathContext } from '@/feature/home/context/PagePath';
 

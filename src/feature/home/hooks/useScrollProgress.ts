@@ -16,7 +16,7 @@ const useScrollProgress = (numOfPages: number): ReturnTypes => {
   if (elContainer) {
     const { clientHeight, offsetTop } = elContainer;
     const screenH = window.innerHeight;
-    const halfH = screenH / 2;
+    const halfH = screenH / 2.5;
     const percentY =
       Math.min(
         clientHeight + halfH,
