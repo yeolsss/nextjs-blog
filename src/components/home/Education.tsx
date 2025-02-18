@@ -5,6 +5,7 @@ import { usePagePath } from '@/context/PagePath';
 
 const Education = () => {
   const { educationRef } = usePagePath();
+
   return (
     <section
       ref={educationRef}

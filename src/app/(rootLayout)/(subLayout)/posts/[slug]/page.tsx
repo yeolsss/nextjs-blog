@@ -2,8 +2,8 @@ import { fetchBlogPostBySlug } from '@/api/contentfulLib';
 import ReactMarkdown from 'react-markdown';
 import { containerStyles } from '@/style/styles';
 import styles from '@/style/markdown.module.scss';
-import Categories from '@/components/category/Categories';
-import BackButton from '@/components/backButton/BackButton';
+import Categories from '../../../../../components/categories';
+import BackButton from '@/components/backButton';
 
 interface Props {
   params: {

@@ -1,9 +1,9 @@
 import React from 'react';
-import IntroductionSection from '@/feature/home/component/IntroductionSection';
-import Skills from '@/feature/home/component/Skills';
-import Career from '@/feature/home/component/Career';
-import Education from '@/feature/home/component/Education';
-import Training from '@/feature/home/component/Training';
+import IntroductionSection from '@/components/home/IntroductionSection';
+import Skills from '@/components/home/Skills';
+import Career from '@/components/home/Career';
+import Education from '@/components/home/Education';
+import Training from '@/components/home/Training';
 
 const Introduction: React.FC = () => {
   return (

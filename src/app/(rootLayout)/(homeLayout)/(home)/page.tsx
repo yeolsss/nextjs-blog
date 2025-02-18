@@ -1,7 +1,7 @@
-import Navigator from '@/feature/home/component/Navigator';
+import Navigator from '@/components/home/Navigator';
 import { containerStyles } from '@/style/styles';
-import Landing from '@/feature/home/component/Landing';
-import Introduction from '@/feature/home/component/Introduction';
+import Landing from '@/components/home/Landing';
+import Introduction from '@/components/home/Introduction';
 import React from 'react';
 
 function Home() {

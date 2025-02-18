@@ -1,5 +1,5 @@
 import { fetchBlogWork } from '@/api/contentfulLib';
-import BackButton from '@/components/backButton/BackButton';
+import BackButton from '@/components/backButton';
 import { containerStyles } from '@/style/styles';
 import ReactMarkdown from 'react-markdown';
 import styles from '@/style/markdown.module.scss';

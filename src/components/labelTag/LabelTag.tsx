@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import Badge from '@/components/badges/Badge';
+import Badge from '@/components/badges';
 
 interface Props {
   data: string[] | undefined;

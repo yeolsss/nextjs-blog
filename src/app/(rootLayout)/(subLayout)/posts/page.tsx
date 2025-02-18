@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ComingSoon from '@/components/comingSoon/ComingSoon';
+import ComingSoon from '@/components/comingSoon';
 
 export interface SearchProps {
   searchParams?: {

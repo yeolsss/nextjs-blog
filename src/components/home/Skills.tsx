@@ -2,7 +2,7 @@
 import React from 'react';
 import { usePagePath } from '@/context/PagePath';
 import { CreateSkillStack } from '@/feature/share/util/badgeImageUtils';
-import ImageBadge from '@/feature/home/component/ImageBadge';
+import ImageBadge from '@/components/home/ImageBadge';
 
 const Skills = () => {
   const { skillsRef } = usePagePath();

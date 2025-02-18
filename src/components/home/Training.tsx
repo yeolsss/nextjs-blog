@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { usePagePath } from '@/context/PagePath';
 
 const Training = () => {
@@ -16,7 +15,33 @@ const Training = () => {
           Training
         </h1>
       </div>
+
       <div className="flex flex-col gap-20">
+        <div className="flex gap-20">
+          <div className="flex flex-col gap-10">
+            <div className="min-w-[20rem] max-sm:min-w-[15rem]">
+              <h2 className="block whitespace-pre-wrap text-[2.4rem] font-bold  leading-[3rem] md:text-[2rem] lg:text-[2.4rem] max-sm:text-[1.6rem] max-sm:leading-[2rem] ">
+                {'2024년 제6회\nK-디지털트 레이닝\n해커톤'}
+              </h2>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-10">
+            <ul className="flex flex-col gap-10">
+              <li>
+                <span className="text-[2.4rem] leading-[3rem] md:text-[2rem] lg:text-[2.4rem] max-sm:text-[1.6rem] max-sm:leading-[2rem] ">
+                  [지정과제] AI 요약 및 설명을 활용한 난임 치료 기록 플랫폼
+                </span>
+              </li>
+              <li>
+                <span className="block text-[2.4rem] leading-[3rem] md:text-[2rem] lg:text-[2.4rem] max-sm:text-[1.6rem] max-sm:leading-[2rem] ">
+                  2024.10.04~2024.11.21
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div className="flex gap-20">
           <div className="flex flex-col gap-10">
             <div className="min-w-[20rem] max-sm:min-w-[15rem]">
