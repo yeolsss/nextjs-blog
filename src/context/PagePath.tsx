@@ -1,4 +1,12 @@
-import React, { PropsWithChildren, useRef } from 'react';
+'use client';
+
+import React, {
+  PropsWithChildren,
+  useCallback,
+  useContext,
+  useMemo,
+  useRef,
+} from 'react';
 
 interface PagePathValue {
   landingRef: React.RefObject<HTMLElement>;
@@ -23,8 +31,9 @@ const initialPagePathValue: PagePathValue = {
 export const PagePathContext =
   React.createContext<PagePathValue>(initialPagePathValue);
 
-interface Props extends PropsWithChildren {}
-const PagePath: React.FC<Props> = ({ children }) => {
+export const usePagePath = () => useContext(PagePathContext);
+
+const PagePath: React.FC<PropsWithChildren> = ({ children }) => {
   const landingRef = useRef<HTMLElement | null>(null);
   const introductionRef = useRef<HTMLElement | null>(null);
   const skillsRef = useRef<HTMLElement | null>(null);
@@ -32,22 +41,37 @@ const PagePath: React.FC<Props> = ({ children }) => {
   const educationRef = useRef<HTMLElement | null>(null);
   const trainingRef = useRef<HTMLElement | null>(null);
 
-  const scrollToSection = (sectionRef?: React.RefObject<HTMLElement>) => {
-    if (!sectionRef) window.scroll({ top: 0, behavior: 'smooth' });
-    if (sectionRef && sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const scrollToSection = useCallback(
+    (sectionRef?: React.RefObject<HTMLElement>) => {
+      if (!sectionRef) window.scroll({ top: 0, behavior: 'smooth' });
+      if (sectionRef && sectionRef.current) {
+        sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
+    [],
+  );
 
-  const value = {
-    landingRef,
-    introductionRef,
-    skillsRef,
-    careerRef,
-    educationRef,
-    trainingRef,
-    scrollToSection,
-  };
+  const value = useMemo(
+    () => ({
+      landingRef,
+      introductionRef,
+      skillsRef,
+      careerRef,
+      educationRef,
+      trainingRef,
+      scrollToSection,
+    }),
+    [
+      landingRef,
+      introductionRef,
+      skillsRef,
+      careerRef,
+      educationRef,
+      trainingRef,
+      scrollToSection,
+    ],
+  );
+
   return (
     <PagePathContext.Provider value={value}>
       {children}

@@ -1,11 +1,11 @@
 'use client';
-import React, { useContext } from 'react';
-import { PagePathContext } from '@/feature/home/context/PagePath';
+import React from 'react';
+import { usePagePath } from '@/context/PagePath';
 import { CreateSkillStack } from '@/feature/share/util/badgeImageUtils';
 import ImageBadge from '@/feature/home/component/ImageBadge';
 
 const Skills = () => {
-  const { skillsRef } = useContext(PagePathContext);
+  const { skillsRef } = usePagePath();
 
   const skillStack = CreateSkillStack();
 

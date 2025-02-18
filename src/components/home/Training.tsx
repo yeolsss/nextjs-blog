@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
-import { PagePathContext } from '@/feature/home/context/PagePath';
+'use client';
+
+import React from 'react';
+import { usePagePath } from '@/context/PagePath';
 
 const Training = () => {
-  const { trainingRef } = useContext(PagePathContext);
+  const { trainingRef } = usePagePath();
 
   return (
     <section

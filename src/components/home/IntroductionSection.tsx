@@ -1,12 +1,14 @@
+'use client';
+
 import { opacityForBlock } from '@/feature/share/util/scrollUtils';
 import ProfileImage from '@/feature/share/components/profile/profileImage/ProfileImage';
-import React, { useContext } from 'react';
+import React from 'react';
 import useScrollProgress from '@/feature/home/hooks/useScrollProgress';
-import { PagePathContext } from '@/feature/home/context/PagePath';
+import { usePagePath } from '@/context/PagePath';
 
 const IntroductionSection = () => {
   const { refContainer, progress } = useScrollProgress(5);
-  const { introductionRef } = useContext(PagePathContext);
+  const { introductionRef } = usePagePath();
 
   return (
     <section

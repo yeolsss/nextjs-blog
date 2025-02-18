@@ -3,7 +3,7 @@ interface Props {
   categoryUrl: string;
   type: string;
 }
-export const Category = ({ category, categoryUrl, type }: Props) => {
+const Category = ({ category, categoryUrl, type }: Props) => {
   return (
     <p
       className={`text-[1.6rem] ${type === 'posts' && 'hover:font-bold'} ${
@@ -16,3 +16,4 @@ export const Category = ({ category, categoryUrl, type }: Props) => {
     </p>
   );
 };
+export default Category;

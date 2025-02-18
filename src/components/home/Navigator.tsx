@@ -1,6 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { ScrollContext } from '@/feature/home/context/ScrollObserver';
-import { PagePathContext } from '@/feature/home/context/PagePath';
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { useScroll } from '@/context/ScrollObserver';
+import { usePagePath } from '@/context/PagePath';
 
 interface SectionRef {
   ref: React.RefObject<HTMLElement>;
@@ -18,8 +20,8 @@ const Navigator = () => {
     educationRef,
     trainingRef,
     scrollToSection,
-  } = useContext(PagePathContext);
-  const { scrollY } = useContext(ScrollContext);
+  } = usePagePath();
+  const { scrollY } = useScroll();
 
   useEffect(() => {
     const checkVisible = () => {

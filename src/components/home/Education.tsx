@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
-import { PagePathContext } from '@/feature/home/context/PagePath';
+'use client';
+
+import React from 'react';
+import { usePagePath } from '@/context/PagePath';
 
 const Education = () => {
-  const { educationRef } = useContext(PagePathContext);
+  const { educationRef } = usePagePath();
   return (
     <section
       ref={educationRef}

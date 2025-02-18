@@ -1,13 +1,12 @@
 'use client';
 import useTyping from '@/feature/share/hooks/useTyping';
 import DownArrow from '@/feature/share/components/DownArrow';
-import React, { useContext } from 'react';
-import { PagePathContext } from '@/feature/home/context/PagePath';
+import React from 'react';
+import { usePagePath } from '@/context/PagePath';
 
 const Landing: React.FC = () => {
   const typing = useTyping('Yeol Portfolio');
-  const { landingRef, introductionRef, scrollToSection } =
-    useContext(PagePathContext);
+  const { landingRef, introductionRef, scrollToSection } = usePagePath();
 
   return (
     <>

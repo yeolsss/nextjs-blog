@@ -1,7 +1,11 @@
+'use client';
+
 import React, {
   PropsWithChildren,
   useCallback,
+  useContext,
   useEffect,
+  useMemo,
   useState,
 } from 'react';
 
@@ -13,9 +17,9 @@ export const ScrollContext = React.createContext<ScrollValue>({
   scrollY: 0,
 });
 
-interface Props extends PropsWithChildren {}
+export const useScroll = () => useContext(ScrollContext);
 
-const ScrollObserver: React.FC<Props> = ({ children }) => {
+const ScrollObserver: React.FC<PropsWithChildren> = ({ children }) => {
   const [scrollY, setScrollY] = useState<number>(0);
   const handleScroll = useCallback(() => {
     setScrollY(window.scrollY);
@@ -28,10 +32,10 @@ const ScrollObserver: React.FC<Props> = ({ children }) => {
     };
   }, [handleScroll]);
 
+  const value = useMemo(() => ({ scrollY }), [scrollY]);
+
   return (
-    <ScrollContext.Provider value={{ scrollY }}>
-      {children}
-    </ScrollContext.Provider>
+    <ScrollContext.Provider value={value}>{children}</ScrollContext.Provider>
   );
 };
 
