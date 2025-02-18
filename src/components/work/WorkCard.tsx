@@ -2,7 +2,7 @@ import Link from 'next/link';
 import transDate from '@/feature/share/util/transDate';
 import { BlogWork } from '@/api/contentfulLib';
 import ProjectImage from './projectImage/ProjectImage';
-import Badge from '@/components/badges/Badge';
+import Badge from '@/components/badges';
 
 export function WorkCard(props: { work: BlogWork }) {
   return (

@@ -1,5 +1,7 @@
-import React, { useContext, useRef } from 'react';
-import { ScrollContext } from '@/feature/home/context/ScrollObserver';
+'use client';
+
+import React, { useRef } from 'react';
+import { useScroll } from '@/context/ScrollObserver';
 
 interface ReturnTypes {
   refContainer: React.RefObject<HTMLDivElement>;
@@ -7,7 +9,7 @@ interface ReturnTypes {
 }
 
 const useScrollProgress = (numOfPages: number): ReturnTypes => {
-  const { scrollY } = useContext(ScrollContext);
+  const { scrollY } = useScroll();
   const refContainer = useRef<HTMLDivElement>(null);
 
   let progress = 0;

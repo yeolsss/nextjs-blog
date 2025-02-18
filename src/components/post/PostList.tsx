@@ -2,7 +2,7 @@ import { containerStyles } from '@/style/styles';
 import PostCard from '@/components/post/postCard/PostCard';
 import * as React from 'react';
 import { fetchBlogPosts } from '@/api/contentfulLib';
-import { SearchProps } from '@/app/posts/page';
+import { SearchProps } from '@/app/(rootLayout)/(subLayout)/posts/page';
 
 const PostList = async ({ searchParams }: SearchProps) => {
   const posts = await fetchBlogPosts(searchParams);
