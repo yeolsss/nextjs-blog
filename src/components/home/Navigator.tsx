@@ -132,7 +132,7 @@ const Navigator = () => {
               Career
             </span>
           </li>
-          <li
+          {/* <li
             className="cursor-pointer"
             onClick={() => scrollToSection(educationRef)}
           >
@@ -151,7 +151,7 @@ const Navigator = () => {
             >
               Training
             </span>
-          </li>
+          </li> */}
         </ul>
       </nav>
     )
